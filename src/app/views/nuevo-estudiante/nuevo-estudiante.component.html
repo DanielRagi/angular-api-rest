@@ -1,0 +1,64 @@
+<app-header></app-header>
+
+<div class="container">
+    <form [formGroup]="nuevoForm" (ngSubmit)="postForm(nuevoForm.value)">
+        <div class="form-group row my-2">
+          <label for="nombre" class="col-4 col-form-label">Documento</label>
+          <div class="col-8">
+            <input type="text" class="form-control" formControlName="id" required/>
+          </div>
+        </div>
+        <div class="form-group row my-2">
+          <label for="nombre" class="col-4 col-form-label">Nombre</label>
+          <div class="col-8">
+            <input type="text" class="form-control" formControlName="nombre" />
+          </div>
+        </div>
+        <div class="form-group row my-2">
+          <label for="apellido" class="col-4 col-form-label">Apellido</label>
+          <div class="col-8">
+            <input type="text" class="form-control" formControlName="apellido" />
+          </div>
+        </div>
+        <div class="form-group row my-2">
+          <label for="programa" class="col-4 col-form-label">Programa</label>
+          <div class="col-8">
+            <input type="text" class="form-control" formControlName="programa" />
+          </div>
+        </div>
+        <div class="form-group row my-2">
+          <label for="ingreso" class="col-4 col-form-label">Ingreso</label>
+          <div class="col-8">
+            <input type="text" class="form-control" formControlName="ingreso" />
+          </div>
+        </div>
+        <div class="form-group row my-2">
+          <label for="ingreso" class="col-4 col-form-label">URL Foto Perfil</label>
+          <div class="col-8">
+            <input type="text" class="form-control" formControlName="urlFotoPerfil" />
+          </div>
+        </div>
+        <div class="form-group row my-2" hidden>
+          <label for="ingreso" class="col-4 col-form-label">Fecha de registro</label>
+          <div class="col-8">
+            <input type="text" class="form-control" formControlName="createdAt" />
+          </div>
+        </div>
+        <div class="form-group row my-2" hidden>
+          <label for="ingreso" class="col-4 col-form-label">Última actualización</label>
+          <div class="col-8">
+            <input type="text" class="form-control" formControlName="updatedAt" />
+          </div>
+        </div>
+    
+        <div class="form-group row my-2">
+          <div class="offset-4 col-8">
+            <button name="submit" type="submit" class="btn btn-success">
+              Guardar
+            </button>
+          </div>
+        </div>
+      </form>
+</div>
+
+<app-footer></app-footer>

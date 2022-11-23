@@ -1,0 +1,24 @@
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
+      <input type="text" id="email" class="fadeIn second" placeholder="Email" formControlName="email">
+      <input type="password" id="password" class="fadeIn third" placeholder="Contraseña" formControlName="password">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div class="alert alert-danger mx-4" *ngIf="errorStatus">
+      <p>{{ errorMessage }}</p>
+    </div>
+
+  </div>
+</div>

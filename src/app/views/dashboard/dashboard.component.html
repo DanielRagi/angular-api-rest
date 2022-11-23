@@ -1,0 +1,32 @@
+<app-header></app-header>
+
+<div class="container">
+
+    <h3>Estudiantes</h3>
+    <button type="button" class="btn btn-primary" (click)="nuevoEstudiante()">Registrar nuevo estudiante</button><br><br>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Documento</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Programa</th>
+        <th scope="col">Ingreso</th>
+        <th scope="col">Fotografía</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let estudiante of estudiantes" (click)="editarEstudiante(estudiante.id)">
+        <th scope="row">{{ estudiante.id }}</th>
+        <td>{{ estudiante.nombre }}</td>
+        <td>{{ estudiante.apellido }}</td>
+        <td>{{ estudiante.programa }}</td>
+        <td>{{ estudiante.ingreso }}</td>
+        <td><img class="w-25" src='{{estudiante.urlFotoPerfil}}'></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<app-footer></app-footer>
