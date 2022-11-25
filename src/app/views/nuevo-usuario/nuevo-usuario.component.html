@@ -1,0 +1,52 @@
+<app-header></app-header>
+
+<div class="container">
+    <form [formGroup]="nuevoForm" (ngSubmit)="postForm(nuevoForm.value)">
+        <div class="form-group row my-2">
+          <label for="username" class="col-4 col-form-label">Username</label>
+          <div class="col-8">
+            <input type="text" class="form-control" formControlName="username" required/>
+          </div>
+        </div>
+        <div class="form-group row my-2">
+          <label for="email" class="col-4 col-form-label">Email</label>
+          <div class="col-8">
+            <input type="text" class="form-control" formControlName="email" />
+          </div>
+        </div>
+        <div class="form-group row my-2">
+          <label for="password" class="col-4 col-form-label">Password</label>
+          <div class="col-8">
+            <input type="password" class="form-control" formControlName="password" />
+          </div>
+        </div>
+        <div class="form-group row my-2">
+          <label for="roles" class="col-4 col-form-label">Roles</label>
+          <div class="col-8">
+            <input type="text" class="form-control" formControlName="roles" />
+          </div>
+        </div>
+        <div class="form-group row my-2" hidden>
+          <label for="ingreso" class="col-4 col-form-label">Fecha de registro</label>
+          <div class="col-8">
+            <input type="text" class="form-control" formControlName="createdAt" />
+          </div>
+        </div>
+        <div class="form-group row my-2" hidden>
+          <label for="ingreso" class="col-4 col-form-label">Última actualización</label>
+          <div class="col-8">
+            <input type="text" class="form-control" formControlName="updatedAt" />
+          </div>
+        </div>
+    
+        <div class="form-group row my-2">
+          <div class="offset-4 col-8">
+            <button name="submit" type="submit" class="btn btn-success">
+              Guardar
+            </button>
+          </div>
+        </div>
+      </form>
+</div>
+
+<app-footer></app-footer>
