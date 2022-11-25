@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { LogoutComponent } from './views/logout/logout.component';
+import { UsuariosComponent } from './views/usuarios/usuarios.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LogoutComponent } from './views/logout/logout.component';
     HeaderComponent,
     FooterComponent,
     routingComponents,
-    LogoutComponent
+    LogoutComponent,
+    UsuariosComponent
   ],
   imports: [
     BrowserModule,
