@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { LogoutComponent } from './views/logout/logout.component';
 import { UsuariosComponent } from './views/usuarios/usuarios.component';
+import { NuevoUsuarioComponent } from './views/nuevo-usuario/nuevo-usuario.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UsuariosComponent } from './views/usuarios/usuarios.component';
     FooterComponent,
     routingComponents,
     LogoutComponent,
-    UsuariosComponent
+    UsuariosComponent,
+    NuevoUsuarioComponent
   ],
   imports: [
     BrowserModule,

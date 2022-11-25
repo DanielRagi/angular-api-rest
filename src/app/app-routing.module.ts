@@ -4,6 +4,8 @@ import { LoginComponent } from './views/login/login.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { NuevoEstudianteComponent } from './views/nuevo-estudiante/nuevo-estudiante.component'
 import { EditarEstudianteComponent } from './views/editar-estudiante/editar-estudiante.component';
+import { UsuariosComponent } from './views/usuarios/usuarios.component';
+import { NuevoUsuarioComponent } from './views/nuevo-usuario/nuevo-usuario.component';
 import { LogoutComponent } from './views/logout/logout.component';
 
 const routes: Routes = [
@@ -12,7 +14,9 @@ const routes: Routes = [
   { path: 'dashboard', component:DashboardComponent },
   { path: 'nuevo-estudiante', component:NuevoEstudianteComponent },
   { path: 'editar-estudiante/:id', component:EditarEstudianteComponent },
-  { path: 'logout', component:LogoutComponent }
+  { path: 'logout', component:LogoutComponent },
+  { path: 'usuarios', component:UsuariosComponent },
+  { path: 'nuevo-usuario', component:NuevoUsuarioComponent }
 ];
 
 @NgModule({

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { LoginInterface } from '../../models/login.interface';
 import { ResponseInterface } from '../../models/response.interface';
 import { EstudiantesInterface } from '../../models/estudiantes.interface'
+import { UsuariosInterface } from 'src/app/models/usuarios.interface';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Observable } from 'rxjs'
 
@@ -66,6 +67,22 @@ export class ApiService {
       body:form
     }
     return this.http.delete<ResponseInterface>(dir, Options)
+  }
+
+  getUsuarios():Observable<UsuariosInterface[]>{
+    let dir = this.url + "users"
+    return this.http.get<UsuariosInterface[]>(dir)
+  }
+
+  postUsuario(form:UsuariosInterface, token:string):Observable<ResponseInterface>{
+    let dir = this.url + "users";
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        'x-access-token': token
+      })
+    };
+    return this.http.post<ResponseInterface>(dir, form, httpOptions)
   }
 
 }
