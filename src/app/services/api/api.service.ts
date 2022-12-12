@@ -11,7 +11,7 @@ import { Observable } from 'rxjs'
 })
 export class ApiService {
 
-  url:string = "http://localhost:3000/"
+  url:string = "https://http-nodejs-production-2b7e.up.railway.app/"
 
   constructor(private http:HttpClient) { }
 
